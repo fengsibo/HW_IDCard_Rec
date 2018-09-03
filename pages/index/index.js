@@ -1,6 +1,6 @@
 Page({
   data: {
-    tempFilePaths: '../../image/id_card_back.jpg',
+    tempFilePaths: '../../image/timg.jpg',
     userInfo: '',
     nickname: '',
     avartarurl: '',
