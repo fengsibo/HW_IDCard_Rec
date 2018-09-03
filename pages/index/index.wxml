@@ -1,0 +1,49 @@
+<view class="index">
+  <view class="index-hd" id='card_index' wx:if="{{show_condition}}">
+    <image src="{{tempFilePaths}}" mode="aspecFill" mode="widthFix" style="width: 100%; height:100%" bindtap='choose_photo'/>
+    <button type='primary' size='default' bindtap='call_camera' class='upload_btn'>拍照上传</button>
+    <button type='primary' size='default' bindtap='choose_photo' class='upload_btn' disabled='true'>本地上传</button>
+  </view>
+  <view class='index-hd' id='camera_index' wx:else>
+    <camera mode="normal" device-position="back" flash="off" binderror="error" style="width: 100%; height: 242px;">
+      <cover-view class="controls">
+          <cover-image class="img" src="../../image/camera_back.png" style="width:100%; height:100%"/>
+      </cover-view>
+      <!-- <cover-view class="noticeTXT">请将身份证放入框内</cover-view> -->
+    </camera>
+    <button type='primary' size='default' bindtap='take_photo' class='upload_btn'>拍照</button>
+    <button type='warn' size='default' bindtap='back_index' class='upload_btn'>返回</button>
+  </view>
+
+  <scroll-view class="container">
+    <view class="table">
+      <view class="tr">
+        <view class="td td-left" style="color: black; font-size: 14px;">分析结果</view>
+      </view>
+      <view class="tr">
+        <view class='td td-left'> {{name}} </view>
+        <view class="td"> {{name_val}} </view>
+      </view>
+      <view class="tr">
+        <view class='td td-left'> {{sex}} </view>
+        <view class="td"> {{sex_val}} </view>
+      </view>
+      <view class="tr">
+        <view class='td td-left'> {{nation}} </view>
+        <view class="td"> {{nation_val}} </view>
+      </view>
+      <view class="tr">
+        <view class='td td-left'> {{birth}} </view>
+        <view class="td"> {{birth_val}} </view>
+      </view>
+      <view class="tr">
+        <view class='td td-left'> {{address}} </view>
+        <view class="td"> {{address_val}} </view>
+      </view>
+      <view class="tr">
+        <view class='td td-left'> {{id}} </view>
+        <view class="td"> {{id_val}} </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

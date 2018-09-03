@@ -1,0 +1,3 @@
+<!--pages/main/main.wxml-->
+<button bindtap='../index/index.wxml'>身份证识别</button>
+<text>pages/main/main.wxml</text>
